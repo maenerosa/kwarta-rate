@@ -6,7 +6,6 @@
     <title>Kwarta Rate</title>
   </head>
   <body>
-    <img src="img/money.png" class="money-img" alt="" />
     <h1>Kwarta-Rate Currency Converter</h1>
     <p>Please choose currency and amount to get the exchange rate</p>
 
@@ -68,9 +67,7 @@
         </select>
         <input type="number" id="amount-one" placeholder="0" value="1" />
       </div>
-      <div class="swap-rate-container">
-        <div class="rate" id="rate"></div>
-      </div>
+
       <div class="currency">
         <select id="currency-two">
           <option value="AED">AED</option>
@@ -126,7 +123,12 @@
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
+
         <input type="number" id="amount-two" placeholder="0" />
+      </div>
+
+      <div class="rate" id="rate">
+        <div class="swap-rate-container"></div>
       </div>
     </div>
     <script type="module" src="/main.js"></script>
