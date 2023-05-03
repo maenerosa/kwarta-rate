@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kwarta Rate</title>
-    <script type="module" crossorigin src="/kwarta-rate/assets/index-d2ccd906.js"></script>
-    <link rel="stylesheet" href="/kwarta-rate/assets/index-61e6ebb1.css">
+    <script type="module" crossorigin src="/kwarta-rate/assets/index-b8c042ad.js"></script>
+    <link rel="stylesheet" href="/kwarta-rate/assets/index-c499915b.css">
   </head>
   <body>
-    <img src="img/money.png" class="money-img" alt="" />
     <h1>Kwarta-Rate Currency Converter</h1>
     <p>Please choose currency and amount to get the exchange rate</p>
 
@@ -70,9 +69,7 @@
         </select>
         <input type="number" id="amount-one" placeholder="0" value="1" />
       </div>
-      <div class="swap-rate-container">
-        <div class="rate" id="rate"></div>
-      </div>
+
       <div class="currency">
         <select id="currency-two">
           <option value="AED">AED</option>
@@ -128,17 +125,14 @@
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
+
         <input type="number" id="amount-two" placeholder="0" />
       </div>
-    </div>
 
-    <div class="chart-container">
-      <div class="chart-header">
-        <h2>Currency Chart</h2>
+      <div class="rate" id="rate">
+        <div class="swap-rate-container"></div>
       </div>
-      <canvas id="myChart"></canvas>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
   </body>
 </html>
