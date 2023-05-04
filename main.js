@@ -5,6 +5,7 @@ const dropList = document.querySelectorAll("form select"),
   fromCurrency = document.querySelector(".from select"),
   toCurrency = document.querySelector(".to select"),
   getButton = document.querySelector("form button");
+
 for (let i = 0; i < dropList.length; i++) {
   for (let currency_code in country_list) {
     let selected =
@@ -12,7 +13,7 @@ for (let i = 0; i < dropList.length; i++) {
         ? currency_code == "USD"
           ? "selected"
           : ""
-        : currency_code == "NPR"
+        : currency_code == "PHP"
         ? "selected"
         : "";
     let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
@@ -22,6 +23,7 @@ for (let i = 0; i < dropList.length; i++) {
     loadFlag(e.target);
   });
 }
+
 function loadFlag(element) {
   for (let code in country_list) {
     if (code == element.value) {
@@ -35,11 +37,14 @@ function loadFlag(element) {
 window.addEventListener("load", () => {
   getExchangeRate();
 });
+
 getButton.addEventListener("click", (e) => {
   e.preventDefault();
   getExchangeRate();
 });
+
 const exchangeIcon = document.querySelector("form .icon");
+
 exchangeIcon.addEventListener("click", () => {
   let tempCode = fromCurrency.value;
   fromCurrency.value = toCurrency.value;
@@ -48,21 +53,24 @@ exchangeIcon.addEventListener("click", () => {
   loadFlag(toCurrency);
   getExchangeRate();
 });
+
 function getExchangeRate() {
   const amount = document.querySelector("form input");
   const exchangeRateTxt = document.querySelector("form .exchange-rate");
-  let amountVal = amount.value;
+
+  const amountVal = amount.value;
   if (amountVal == "" || amountVal == "0") {
     amount.value = "1";
     amountVal = 1;
   }
+
   exchangeRateTxt.innerText = "Getting exchange rate...";
-  let url = `https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/${fromCurrency.value}`;
+  const url = `https://v6.exchangerate-api.com/v6/e7295139cb18bf656c390d38/latest/${fromCurrency.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
-      let exchangeRate = result.conversion_rates[toCurrency.value];
-      let totalExRate = (amountVal * exchangeRate).toFixed(2);
+      const exchangeRate = result.conversion_rates[toCurrency.value];
+      const totalExRate = (amountVal * exchangeRate).toFixed(2);
       exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
     })
     .catch(() => {

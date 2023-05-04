@@ -26,9 +26,14 @@ body {
 }
 .container header {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: bolder;
   text-align: center;
 }
+
+span {
+  color: #f174ff;
+}
+
 .container form {
   margin: 40px 0 20px 0;
 }
