@@ -6,25 +6,34 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 100vh;
+  padding: 1rem 2rem;
   background: #dde1e7;
 }
 ::selection {
   color: #fff;
   background: #dde1e7;
 }
-.container {
-  width: 370px;
-  padding: 30px;
+.chart-container {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 1rem;
   border-radius: 7px;
   background: #fff;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
-.container header {
+.rate-container {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.rate-container header {
   font-size: 28px;
   font-weight: bolder;
   text-align: center;
@@ -34,7 +43,7 @@ span {
   color: #f174ff;
 }
 
-.container form {
+.rate-container form {
   margin: 40px 0 20px 0;
 }
 form :where(input, select, button) {
