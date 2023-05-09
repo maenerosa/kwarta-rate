@@ -64,16 +64,16 @@ function getExchangeRate() {
     amountVal = 1;
   }
 
-  exchangeRateTxt.innerText = "Getting exchange rate...";
+  exchangeRateTxt.textContent = "Getting exchange rate...";
   const url = `https://v6.exchangerate-api.com/v6/e7295139cb18bf656c390d38/latest/${fromCurrency.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
       const exchangeRate = result.conversion_rates[toCurrency.value];
       const totalExRate = (amountVal * exchangeRate).toFixed(2);
-      exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
+      exchangeRateTxt.textContent = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
     })
     .catch(() => {
-      exchangeRateTxt.innerText = "Something went wrong";
+      exchangeRateTxt.textContent = "Something went wrong";
     });
 }

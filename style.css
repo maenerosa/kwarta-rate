@@ -17,7 +17,7 @@ body {
   color: #fff;
   background: #dde1e7;
 }
-.chart-container {
+#chart-container {
   width: 100%;
   padding: 1rem 1rem;
   margin: 1rem;
