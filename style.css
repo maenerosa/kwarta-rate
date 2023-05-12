@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  min-height: 792px;
+  min-height: 100vh;
   background: #dde1e7;
 }
 ::selection {
@@ -20,13 +20,12 @@ body {
 .container {
   position: relative;
   width: 100%;
-  height: 792px;
+  min-height: 100vh;
   border-radius: 0.4rem;
-  background: #fff;
 }
 .bg-pink {
   position: absolute;
-  background: #ce00e5af;
+  background: #f174ff;
   top: 0;
   left: 0;
   width: 100%;
@@ -44,17 +43,14 @@ body {
 
 .rate-container {
   min-width: 900px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 0.4rem;
+  padding: 4rem 3rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding: 4rem 3rem;
-  -webkit-box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.484);
 }
 
 .rate-container h2 {
@@ -62,9 +58,7 @@ body {
   top: -70px;
   left: 50%;
   width: 100%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  transform: translate(-50%);
   color: #fff;
   font-size: 2.4rem;
   letter-spacing: 2px;
@@ -73,7 +67,7 @@ body {
   line-height: 1.4;
 }
 span {
-  color: #ffffff;
+  color: #606060;
 }
 
 .rate-container form {
@@ -147,14 +141,15 @@ form button {
   background-color: #f174ff;
   border: none;
   color: #fff;
-  font-family: inherit;
+  font-weight: bolder;
   font-size: 1.2rem;
   padding: 0.8rem 1.4rem;
   margin-top: 1.6rem;
   cursor: pointer;
 }
 form button:hover {
-  background: #f174ff;
+  color: #fff;
+  background: #00000065;
 }
 
 @media screen and (max-width: 1000px) {
