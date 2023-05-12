@@ -9,39 +9,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <title>Kwarta Rate</title>
-    <script type="module" crossorigin src="/kwarta-rate/assets/index-0ffb6e7b.js"></script>
-    <link rel="stylesheet" href="/kwarta-rate/assets/index-e7a8722e.css">
+    <script type="module" crossorigin src="/kwarta-rate/assets/index-2f08def8.js"></script>
+    <link rel="stylesheet" href="/kwarta-rate/assets/index-196a1277.css">
   </head>
   <body>
-    <div class="rate-container">
-      <header>Kwarta <span>Converter</span></header>
-      <form action="#">
-        <div class="amount">
-          <p>Enter Amount</p>
-          <input type="text" value="1" />
-        </div>
-        <div class="drop-list">
-          <div class="from">
-            <p>From</p>
-            <div class="select-box">
-              <img src="https://flagcdn.com/48x36/us.png" alt="flag" />
-              <select></select>
+    <div class="container">
+      <div class="bg-pink"></div>
+      <div class="bg-white"></div>
+
+      <div class="rate-container">
+        <h2>Kwarta <span>Converter</span></h2>
+        <form action="#">
+          <div class="amount">
+            <p>Enter Amount</p>
+            <input type="text" value="1" />
+          </div>
+          <div class="drop-list">
+            <div class="from">
+              <p>From</p>
+              <div class="select-box">
+                <img src="https://flagcdn.com/48x36/us.png" alt="flag" />
+                <select></select>
+              </div>
+            </div>
+            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+            <div class="to">
+              <p>To</p>
+              <div class="select-box">
+                <img src="https://flagcdn.com/48x36/ph.png" alt="flag" />
+                <select></select>
+              </div>
             </div>
           </div>
-          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-          <div class="to">
-            <p>To</p>
-            <div class="select-box">
-              <img src="https://flagcdn.com/48x36/ph.png" alt="flag" />
-              <select></select>
-            </div>
-          </div>
-        </div>
-        <div class="exchange-rate">Getting exchange rate...</div>
-        <button>Get Currency Rate</button>
-      </form>
+          <div class="exchange-rate">Getting exchange rate...</div>
+          <button>Convert</button>
+        </form>
+      </div>
     </div>
-    <div id="chart-container"></div>
     
   </body>
 </html>
