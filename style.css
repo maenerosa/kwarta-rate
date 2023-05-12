@@ -11,10 +11,10 @@ body {
   justify-content: center;
   gap: 1rem;
   min-height: 100vh;
-  background: #dde1e7;
+  background: #ffffff;
 }
 ::selection {
-  color: #fff;
+  color: #ffff;
   background: #dde1e7;
 }
 .container {
@@ -43,7 +43,7 @@ body {
 
 .rate-container {
   min-width: 900px;
-  background-color: #ffffff;
+  background-color: #ffffffeb;
   border-radius: 0.4rem;
   padding: 4rem 3rem;
   position: absolute;
@@ -169,6 +169,6 @@ form button:hover {
 
 @media screen and (max-width: 678px) {
   .rate-container {
-    min-width: 325px;
+    min-width: 400px;
   }
 }
