@@ -58,7 +58,7 @@ function getExchangeRate() {
   const amount = document.querySelector("form input");
   const exchangeRateTxt = document.querySelector("form .exchange-rate");
 
-  const amountVal = amount.value;
+  let amountVal = amount.value;
   if (amountVal == "" || amountVal == "0") {
     amount.value = "1";
     amountVal = 1;
@@ -77,3 +77,20 @@ function getExchangeRate() {
       exchangeRateTxt.textContent = "Something went wrong";
     });
 }
+
+// const apiUrl1 = "https://jsonplaceholder.typicode.com/todos/1";
+// const apiUrl2 = "https://jsonplaceholder.typicode.com/todos/2";
+
+// async function getData() {
+//   const [response1, response2] = await Promise.all([
+//     fetch(apiUrl1),
+//     fetch(apiUrl2),
+//   ]);
+
+//   const data1 = await response1.json();
+//   const data2 = await response2.json();
+
+//   console.log({ data1, data2 });
+// }
+
+// getData();
